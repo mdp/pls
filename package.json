@@ -1,0 +1,20 @@
+{
+  "name": "pls",
+  "version": "0.1.0",
+  "description": "Parse MP3 playlist files (.pls)",
+  "main": "index.js",
+  "scripts": {
+    "test": "coffee test/index.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdp/pls"
+  },
+  "keywords": [
+    "pls",
+    "mp3",
+    "playlist"
+  ],
+  "author": "Mark Percival <m@mdp.im>",
+  "license": "MIT"
+}

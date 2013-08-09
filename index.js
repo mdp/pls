@@ -10,7 +10,7 @@
     lines = pls.split("\n");
     for (_i = 0, _len = lines.length; _i < _len; _i++) {
       line = lines[_i];
-      match = line.match(/([a-zA-Z0-9]+)\=(.+)$/);
+      match = line.match(/([a-zA-Z0-9]+)\=(.+)\r?$/);
       if (match && match.length >= 2) {
         obj[match[1].toLowerCase()] = match[2];
       }

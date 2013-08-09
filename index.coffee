@@ -3,7 +3,7 @@ exports.parse = (pls) ->
   tracks = []
   lines = pls.split("\n")
   for line in lines
-    match = line.match(/([a-zA-Z0-9]+)\=(.+)$/)
+    match = line.match(/([a-zA-Z0-9]+)\=(.+)\r?$/)
     if match && match.length >= 2
       obj[match[1].toLowerCase()] = match[2]
   numberOfEntries = parseInt(obj.numberofentries,10) || 0

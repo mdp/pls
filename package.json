@@ -1,6 +1,6 @@
 {
   "name": "pls",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Parse MP3 playlist files (.pls)",
   "main": "index.js",
   "scripts": {

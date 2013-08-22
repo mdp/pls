@@ -1,16 +1,16 @@
 exports.parse = (pls) ->
   obj = {}
   tracks = []
-  lines = pls.split("\n")
+  lines = pls.split '\n'
   for line in lines
-    match = line.match(/([a-zA-Z0-9]+)\=(.+)\r?$/)
-    if match && match.length >= 2
+    match = line.match /([a-zA-Z0-9]+)\=(.+)\r?$/
+    if match and match.length >= 2
       obj[match[1].toLowerCase()] = match[2]
-  numberOfEntries = parseInt(obj.numberofentries,10) || 0
-  for i in [1..numberOfEntries] by 1
-    track = new Track(obj["file#{i}"], obj["title#{i}"], parseInt(obj["length#{i}"],10))
-    tracks.push track
+  numberOfEntries = parseInt(obj.numberofentries, 10) or 0
+  for i in [1..numberOfEntries]
+    tracks.push
+      uri: obj["file#{i}"]
+      title: obj["title#{i}"]
+      length: parseInt obj["length#{i}"], 10
   tracks
 
-Track = (@uri, @title, @length) ->
-  return this

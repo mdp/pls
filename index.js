@@ -26,7 +26,7 @@
   };
 
   if ((typeof module !== "undefined" && module !== null) && (module.exports != null)) {
-    module.exports = parse;
+    module.exports.parse = parse;
   } else if ((typeof window !== "undefined" && window !== null) && window === this) {
     window.PLS = {
       parse: parse

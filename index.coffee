@@ -15,7 +15,7 @@ parse = (pls) ->
   tracks
 
 if module? and module.exports?
-  module.exports = parse
+  module.exports.parse = parse
 else if window? and window is @
   window.PLS =
     parse: parse

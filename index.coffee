@@ -1,4 +1,4 @@
-exports.parse = (pls) ->
+parse = (pls) ->
   obj = {}
   tracks = []
   lines = pls.split '\n'
@@ -13,4 +13,10 @@ exports.parse = (pls) ->
       title: obj["title#{i}"]
       length: parseInt obj["length#{i}"], 10
   tracks
+
+if module? and module.exports?
+  module.exports = parse
+else if window? and window is @
+  window.PLS =
+    parse: parse
 
